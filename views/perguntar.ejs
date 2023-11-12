@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q&A Page</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-</head>
+<%- include ('./partials/header.ejs') %>
 <body>
-    <div class="container">
-        <h3>Realizar Pergunta</h3>
-        <form>
-            <input type="text" placeholder="Titulo" class="form-control">
-            <textarea placeholder="Escreva a Pergunta" class="form-control"></textarea>
-        </form>
+    <%- include ('./partials/navbar.ejs') %>
+   
+    <div class="container" id="form_pergunta">
+        <div class="card">
+            <div class="card-header">
+                <h3>Realizar Pergunta</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/save_question">
+                    <label>Título</label>
+                    <input type="text" placeholder="Titulo" class="form-control" name="title">
+                    <br>
+                    <label>Pergunta</label>
+                    <textarea placeholder="Escreva a Pergunta" class="form-control" name="desc"></textarea>
+                    <br>
+                    <button class="btn btn-success">Perguntar</button>
+                </form>
+            </div>
+        </div>  
     </div>
-
 </body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="/js/bootstrap/min.js"></script>
-</html>
+<%- include ('./partials/footer.ejs') %>

@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(204, 204, 204);
+}
+
+#logo{
+    height: 50px;
+    width: 150px;
+}
+
+#form_pergunta{
+    margin-top: 5vh;
+}
